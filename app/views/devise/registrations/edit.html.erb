@@ -1,0 +1,29 @@
+
+<div class="body">
+  <div class="container">
+    <p class="notice"></p>
+    <div class="row">
+      <h2>User info</h2>
+      <%= form_for(@user) do |f| %>
+      <div class="field">
+        <%= f.label :Name %>
+        <%= f.text_field :name, autofocus: true %>
+      </div>
+      <dif class="field">
+        <%= f.label :Image %>
+      </dif>
+      <div class="form-group has-icon">
+        <div class="user-edit-image">
+        </div>
+        <label class="control-label sr-only" for="inputEmail">ProfileImage</label>
+        <%= f.attachment_field :profile_image, placeholder: "Image", class: "user-edit-form" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :Introduction %>
+        <%= f.text_field :profile_image, autofocus: true %><br>
+      <%= f.submit "Update User" %>
+      <% end %>
+    </div>
+  </div>
+</div>
